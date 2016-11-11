@@ -8,7 +8,7 @@ class ManyAssetsController < ApplicationController
   end
 
   def display
-    icon = Icon.find(params[:id])
+    icon = @icons.find(params[:id])
     render :text => icon.icon, :content_type => "image/x-icon", :layout => false
   end
 end
